@@ -78,6 +78,7 @@ X_test_combined  = np.concatenate([X_test_text, X_test_audio], axis=1)
 The model is optimized using the Adam optimizer and sparse categorical cross-entropy.
 
 Python
+
 model.compile(
     optimizer='adam',
     loss='sparse_categorical_crossentropy',
@@ -85,6 +86,7 @@ model.compile(
 )
 
 # Callbacks: EarlyStopping, ReduceLROnPlateau
+
 history = model.fit(
     X_train_combined, y_train,
     validation_data=(X_test_combined, y_test),
@@ -92,10 +94,15 @@ history = model.fit(
     batch_size=32
 )
 📈 Performance
+
 Metric	Value
+
 Training Accuracy	~60%
+
 Validation Accuracy	~51%
+
 Loss Gap	Indicates mild overfitting
+
 🚀 How to Run
 Prepare Embeddings: Ensure you have the following .npy files in your directory:
 
@@ -106,10 +113,13 @@ test_bert.npy, test_audio.npy
 Run Training:
 
 Bash
+
 python main.py
+
 Model Saving: The trained model will be saved as aud+text_model.keras.
 
 ⚠️ Limitations
+
 Simple Fusion: Feature concatenation does not capture complex cross-modal correlations (no attention mechanism).
 
 Acoustic Detail: Audio features are averaged across time, losing temporal information.
@@ -117,15 +127,16 @@ Acoustic Detail: Audio features are averaged across time, losing temporal inform
 Static Text: BERT embeddings are precomputed; no end-to-end fine-tuning is performed.
 
 🔮 Future Improvements
-[ ] Implement Multimodal Transformers for better inter-modal interaction.
 
-[ ] Add Attention-based Fusion layers.
+- Implement Multimodal Transformers for better inter-modal interaction.
 
-[ ] Fine-tune BERT weights during training.
+- Add Attention-based Fusion layers.
 
-[ ] Use LSTM/GRU or Transformer encoders for audio sequence modeling.
+- Fine-tune BERT weights during training.
 
-[ ] Apply Data Augmentation (pitch shifting, noise injection) for audio.
+- Use LSTM/GRU or Transformer encoders for audio sequence modeling.
+
+- Apply Data Augmentation (pitch shifting, noise injection) for audio.
 
 👨‍💻 Author
 Vishal Kumar
