@@ -1,0 +1,85 @@
+# ----------------------
+# Logs
+# ----------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ----------------------
+# Node.js
+# ----------------------
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+
+# ----------------------
+# Python
+# ----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python packaging
+build/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ----------------------
+# Cache & temp files
+# ----------------------
+.cache/
+*.cache
+.pytest_cache/
+.mypy_cache/
+
+# ----------------------
+# Editor / IDE
+# ----------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# VS / Windows
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Vim
+*.sw?
+
+# ----------------------
+# OS files
+# ----------------------
+Thumbs.db
+
+# ----------------------
+# Misc
+# ----------------------
+coverage/
+*.tgz
+*.gz
